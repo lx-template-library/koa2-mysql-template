@@ -1,6 +1,4 @@
-const config = require("../config");
-console.log(config, "config")
-const {sequelize, Sequelize} = config;
+const {sequelize, Sequelize} = require("../config");
 const users = sequelize.define(
   'user',  // 定义的表会自动加s，这里的表名为users
   {
@@ -43,9 +41,7 @@ const users = sequelize.define(
     wechat_name: {
       type: Sequelize.STRING(30),
       allowNull: false,
-    },
-    created_at: Sequelize.DATE,
-    updated_at: Sequelize.DATE,
+    }
   },
   {
     timestamps: true  // 不自动生成时间
