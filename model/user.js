@@ -6,7 +6,7 @@ const users = sequelize.define(
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
-      allowNull: true,
+      allowNull: false,
       autoIncrement: true
     },
     name: {
@@ -48,6 +48,4 @@ const users = sequelize.define(
   }
 );
 // 导出数据模型model
-module.exports = {
-  users,
-};
+module.exports = users;
